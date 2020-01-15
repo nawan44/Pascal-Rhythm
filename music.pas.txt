@@ -1,0 +1,90 @@
+program ctr_unit;
+uses crt;
+
+var 
+    speed: integer;
+
+procedure nada(suara, lama:integer);
+begin
+    case suara of
+    1 : begin   
+            sound(261);
+        end;
+    2 : begin
+            sound(293);
+        end;
+    3 : begin    
+            sound(329);
+        end;
+    4 : begin    
+            sound(349);
+        end;
+    5 : begin   
+            sound(392);
+        end;
+    6 : begin
+            sound(440);
+        end;
+    7 : begin   
+            sound(493);
+        end;
+    11 : begin  
+            sound(523);
+        end;
+    end;
+    delay(lama);
+end;
+
+begin
+    clrscr;
+    speed:=200;
+    writeln('Music Playing...');
+
+    nada(5,speed);
+    nada(3,speed);
+    nada(5,speed);
+    nada(3,speed);
+    nada(3,speed);
+    nada(4,speed);
+    nada(5,speed);
+    
+    nosound;
+    delay(speed);
+
+    nada(4,speed);
+    nada(2,speed);
+    nada(4,speed);
+    nada(6,speed);
+    nada(5,speed);
+    nada(4,speed);
+    nada(3,speed);
+    
+    nosound;
+    delay(speed);
+
+    nada(6,speed);
+    nada(4,speed);
+    nada(6,speed);
+    nada(4,speed);
+    nada(6,speed);
+    nada(7,speed);
+    nada(11,speed);
+    
+    nosound;
+    delay(speed);
+
+    nada(11,speed);
+    
+    nosound;
+    delay(speed);
+
+    nada(3,speed);
+    nada(5,speed);
+    nada(4,speed);
+    nada(2,speed);
+    nada(1,speed);
+
+    writeln('tamat');
+
+end.
+
